@@ -40,12 +40,14 @@
 
 everyMon = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
+
 # 判断是否为闰年并作出相应的处理
 def leap_year(year):
     if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
         everyMon[1] = 29
     else:
         everyMon[1] = 28
+
 
 # 求year年month月1日是星期几
 def get_week(year, month):
@@ -58,6 +60,7 @@ def get_week(year, month):
         total_days += everyMon[i - 1]
     week = (total_days + 2) % 7
     return 7 if week == 0 else week
+
 
 # 求year年a月第b个星期c是几号
 def get_day(year, a, b, c):
@@ -75,9 +78,6 @@ def get_day(year, a, b, c):
     else:
         print(f"{year}/{a:02d}/{i + 1:02d}")
 
-if __name__ == "__main__":
-    a, b, c, y1, y2 = map(int, input().split())
-    for year in range(y1, y2 + 1):
-        get_day(year, a, b, c)
-
-
+a, b, c, y1, y2 = map(int, input().split())
+for year in range(y1, y2 + 1):
+    get_day(year, a, b, c)
