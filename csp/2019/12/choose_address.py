@@ -19,6 +19,7 @@ for site in grap:
             is_address += 1
         else:
             break
+    #is_address==t4 表明可以是垃圾站
     if is_address == 4:
         for x, y in dricetions[4:]:
             new_site = tuple([x + site[0], y + site[1]])
