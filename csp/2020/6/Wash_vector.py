@@ -12,3 +12,4 @@ for i in range(b):
     if v[0] in ab_v:
         ans+=v[1]*ab_v[v[0]]
 print(ans)
+
